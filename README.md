@@ -1,5 +1,6 @@
 # GDPR Privacy Photo Filter
-De-identification of Photos
+## De-identification of Photos
+## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/)
 De-identification and Tracking for Photos and Enforcement of GDPR.
 
 This repo is the starting library for tracking and scrubbing of photos in the fight against Catfishing as a GDPR violation.
@@ -14,8 +15,11 @@ What needs to be done:
 
 Tasks:
 - [x] Face Detect - Colab Testing - Included in the Notebook folder in the repo.
-- [ ] Facescrub - Colab Testing - Simplest De-identification - Simple blur - Commonly available
+- [X] Facescrub - Colab Testing - Simplest De-identification - Simple blur - Commonly available
 - [ ] Basic Library Object Implementation
+- [ ] v0.1 Release for George Floyd Implementation
+- [ ] Location and Meta Information Scrub
+- [ ] Race Scrub
 - [ ] MetaMark - Direct Implementation no datascience required
 - [ ] getMetaMarks - Direct Implementation
 - [ ] run - Runs the scanning for faces, scrubbing, and applies metamarks
@@ -29,3 +33,29 @@ Tasks:
 - [ ] v0.9 Release - Hidden in plain sight photo de-identification
 - [ ] AIMark - Mark through the pixels in a secret method a way to identify the source and downloader of the photo
 - [ ] getAIMark - Retreive this secret marking
+
+
+## Installation - Not working yet
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Privy - Privacy Photo Filter library.
+
+```bash
+pip install privy
+```
+
+## Usage
+
+```python
+import privy
+
+(faces, private-photo) = privy.processFile(imgPath)
+
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update the tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
