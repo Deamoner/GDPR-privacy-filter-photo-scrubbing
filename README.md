@@ -17,6 +17,7 @@ Tasks:
 - [x] Face Detect - Colab Testing - Included in the Notebook folder in the repo.
 - [X] Facescrub - Colab Testing - Simplest De-identification - Simple blur - Commonly available
 - [ ] Basic Library Object Implementation
+- [ ] Training data for accuracy data - added dataset aquisition colab notebook
 - [ ] v0.1 Release for George Floyd Implementation
 - [ ] Location and Meta Information Scrub
 - [ ] Race Scrub
