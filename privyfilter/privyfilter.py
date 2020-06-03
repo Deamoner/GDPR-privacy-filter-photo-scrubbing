@@ -18,7 +18,7 @@ import os.path
 
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
-class Privy(object):
+class Privyfilter(object):
     """
     Common methods for processing the photos.
     """

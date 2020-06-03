@@ -4,14 +4,15 @@ with open("README.md", "r") as f:
     DESCRIPTION = f.read()
 
 setup(
-    name="privy-filter",
-    version="0.1.0",
+    name="privyfilter",
+    version="0.1.8",
     description="Privacy Photo filter for GDPR compliant photo sharing and machine learning without bias.",
-    url="https://github.com/deamoner/privy-filter",
+    url="https://github.com/deamoner/privyfilter",
     author="Mattthew Davis AKa Deamoner",
     author_email="mdavis@virtustructure.com",
     license="MIT",
-    packages=["privy-filter"],
+    packages=["privyfilter"],
+    package_directory={"":"../privyfilter/"},
     keywords="photo privacy de-identification anonymization",
     install_requires=["numpy>=1.18.4",
     "opencv-python>=4.2.0.34",
