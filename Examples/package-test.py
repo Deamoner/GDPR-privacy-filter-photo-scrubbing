@@ -1,3 +1,3 @@
-from privyfilter import privyfilter as pf
+from privyfilter.privyfilter import Privyfilter as pf
 
-dog = pf.processFile()
+dog = pf.processFile("../TestPics/1Person-Close.jpg")

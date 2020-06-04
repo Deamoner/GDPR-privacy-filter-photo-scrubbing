@@ -34,9 +34,9 @@ class Privyfilter(object):
     def processFile(imgPath):
         filetest = os.path.isfile(imgPath)
         #if image no good throw error
-        filetest = os.path.isfile('../Configs/haarcascade_frontalface_default.xml')
+        filetest = os.path.isfile('./Configs/haarcascade_frontalface_default.xml')
         #
-        face_cascade = cv2.CascadeClassifier('../Configs/haarcascade_frontalface_default.xml')
+        face_cascade = cv2.CascadeClassifier('./Configs/haarcascade_frontalface_default.xml')
         img = cv2.imread(imgPath)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(img, 1.3, 5)
