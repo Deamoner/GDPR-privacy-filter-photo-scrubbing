@@ -1,4 +1,4 @@
-# GDPR Privacy Photo Filter
+# DEPRECATED - Moved to [privyfilter](https://github.com/Deamoner/privyfilter) GDPR Privacy Photo Filter
 ## De-identification of Photos
 ## Built with :heart: by [Matthew Davis](https://www.linkedin.com/in/tech-lead-matt-davis/) - [linkedin](https://www.linkedin.com/in/tech-lead-matt-davis/) - [github](https://github.com/Deamoner) - [Medium](https://medium.com/@mdavis_71283) - [Youtube](https://www.youtube.com/channel/UCJNZxBqs8ElqouPqAkZLlqg) - [Facebook](https://www.facebook.com/matthewjamesdavis/)
 De-identification and Tracking for Photos.
@@ -50,29 +50,6 @@ What needs to be done:
 3. Library wrapping and Implementation
 4. Library Publish
 
-
-Tasks:
-- [x] Face Detect - Colab Testing - Included in the Notebook folder in the repo.
-- [X] Facescrub - Colab Testing - Simplest De-identification - Simple blur - Commonly available
-- [X] Face Location Extraction
-- [ ] Basic Library Object Implementation
-- [ ] v0.1 Release for George Floyd Implementation
-- [ ] Pose Extraction
-- [ ] Location and Meta Information Scrub
-- [ ] Race Scrub
-- [ ] MetaMark - Direct Implementation no datascience required
-- [ ] getMetaMarks - Direct Implementation
-- [ ] run - Runs the scanning for faces, scrubbing, and applies metamarks
-- [ ] v0.5 Release - Library can now take photos and auto De-id them
-- [ ] getPII - get's all the PII in text on the page
-- [ ] scrubPII - Will scrub the PII in the image - simple blur
-- [ ] Update run functions configs to utilize all functions
-- [ ] v0.8 Release - Automated Privacy Picture Scrubbing with Faces and text - handles most public access scenarios
-- [ ] RandomFaceReplace - Synthetic face generation for hidden in plain sight Privacy
-- [ ] alterPII - Simple word replacement for hidden in plain sight
-- [ ] v0.9 Release - Hidden in plain sight photo de-identification
-- [ ] AIMark - Mark through the pixels in a secret method a way to identify the source and downloader of the photo
-- [ ] getAIMark - Retreive this secret marking
 
 
 ## Installation - Not working yet
