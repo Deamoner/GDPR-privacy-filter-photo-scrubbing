@@ -31,16 +31,16 @@ class Privyfilter(object):
 
     #Method for loading the models and libraries for the object
     @staticmethod
-    def processFile(imgPath):
+    def faceScrub(imgPath):
         filetest = os.path.isfile(imgPath)
         #if image no good throw error
         filetest = os.path.isfile('./Configs/haarcascade_frontalface_default.xml')
-        #
+        print(filetest)
         face_cascade = cv2.CascadeClassifier('./Configs/haarcascade_frontalface_default.xml')
         img = cv2.imread(imgPath)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(img, 1.3, 5)
-        anonyimage = Privy.find_and_blur(gray, img)
+        anonyimage = Privyfilter.find_and_blur(gray, img)
         #cv2.imwrite('sample_out_2.jpg', cv2.cvtColor(anonyimage, cv2.COLOR_RGB2BGR))
         #cv2.imwrite('sample_out_2.jpg', anonyimage)
         return faces, anonyimage
@@ -66,8 +66,8 @@ class Privyfilter(object):
         return image
     #Private Method for annoymizing the faces
     def find_and_blur(bw, color):
-        face_cascade = cv2.CascadeClassifier('../Configs/haarcascade_frontalface_default.xml')
+        face_cascade = cv2.CascadeClassifier('./Configs/haarcascade_frontalface_default.xml')
         faces = face_cascade.detectMultiScale(bw, 1.1, 4)
         for (x, y, w, h) in faces:
-            color[y:y+h, x:x+w] = Privy.anonymize_face(color[y:y+h, x:x+w])
+            color[y:y+h, x:x+w] = Privyfilter.anonymize_face(color[y:y+h, x:x+w])
         return color
