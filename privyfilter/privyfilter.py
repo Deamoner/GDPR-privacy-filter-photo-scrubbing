@@ -16,7 +16,8 @@ import cv2
 import matplotlib.pyplot as plt
 import os.path
 
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+mydir = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.join(mydir, "Configs", "haarcascade_frontalface_default.xml")
 
 class Privyfilter(object):
     """
@@ -34,9 +35,9 @@ class Privyfilter(object):
     def faceScrub(imgPath):
         filetest = os.path.isfile(imgPath)
         #if image no good throw error
-        filetest = os.path.isfile('./Configs/haarcascade_frontalface_default.xml')
-        print(filetest)
-        face_cascade = cv2.CascadeClassifier('./Configs/haarcascade_frontalface_default.xml')
+        filetest = os.path.isfile(config_path)
+        
+        face_cascade = cv2.CascadeClassifier(config_path)
         img = cv2.imread(imgPath)
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(img, 1.3, 5)
@@ -66,7 +67,7 @@ class Privyfilter(object):
         return image
     #Private Method for annoymizing the faces
     def find_and_blur(bw, color):
-        face_cascade = cv2.CascadeClassifier('./Configs/haarcascade_frontalface_default.xml')
+        face_cascade = cv2.CascadeClassifier(config_path)
         faces = face_cascade.detectMultiScale(bw, 1.1, 4)
         for (x, y, w, h) in faces:
             color[y:y+h, x:x+w] = Privyfilter.anonymize_face(color[y:y+h, x:x+w])
